@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -14,24 +16,26 @@
   },
   "license": "ISC",
   "dependencies": {
-    "body-parser": "1.15.0",
+    "body-parser": "1.18.2",
     "cors": "2.7.1",
     "dotenv": "2.0.0",
     "ejs": "2.4.1",
     "errorhandler": "1.4.3",
-    "express": "4.13.4",
+    "express": "4.15.5",
     "express-jwt": "3.3.0",
-    "express-session": "1.13.0",
+    "express-session": "1.15.6",
     "jsonwebtoken": "7.1.9",
     "method-override": "2.3.5",
     "methods": "1.1.2",
     "mongoose": "4.4.10",
     "mongoose-unique-validator": "1.0.2",
-    "morgan": "1.7.0",
+    "morgan": "1.9.0",
     "passport": "0.3.2",
     "passport-local": "1.0.0",
-    "request": "2.69.0",
+    "request": "2.74.0",
     "slug": "0.9.1",
-    "underscore": "1.8.3"
-  }
+    "underscore": "1.8.3",
+    "snyk": "^1.41.1"
+  },
+  "snyk": true
 }
